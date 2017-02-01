@@ -1,0 +1,172 @@
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #00bcd4;
+  height:auto;
+  min-height: 250px;
+  padding: 20px;
+  /*color: white;*/
+  /*border: solid;*/
+
+}
+.App-header-title {
+	/*text-align: left;*/
+	margin-top: 60px;
+	margin-right:13.80em;
+	/*margin-left:10%;*/
+	font-family: Roboto,sans-serif;
+	font-size: 56px;
+	-webkit-font-smoothing: antialiased;
+	color: white;
+	/*-webkit-margin-before: 0.83em;
+	-webkit-margin-after: 0.83em;*/
+}
+
+.App-content-title {
+	/*text-align: left;*/
+	margin-right:19.80em;
+	color: #00bcd4;
+	font-family: Roboto,sans-serif;
+	font-size: 38px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.Book-content-title {
+	/*text-align: left;*/
+	margin-right:16.80em;
+	color: #00bcd4;
+	font-family: Roboto,sans-serif;
+	font-size: 38px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.App-content-img {
+	margin-right:8.80em;
+
+	/*text-align: left;*/
+	/*margin-left:10%;*/
+	/*align-items: flex-start;*/
+}
+.App-content-text {
+	/*text-align: left;*/
+	/*margin-left:11%;*/
+	/*border: solid;*/
+	margin-right:39.80em;
+	color: black;
+	font-family: Roboto,sans-serif;
+	font-size: 18px;
+	-webkit-font-smoothing: antialiased;
+}
+.App-intro {
+  font-size: large;
+}
+
+.App-Button-Side {
+	/*border: solid;*/
+	height:40px;
+	width:40px;
+	margin:0;
+	padding:0;
+	position:absolute;
+	color:black;
+	cursor:pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenavlink {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav .sidenavlink:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.Book-Calendar {
+	/*margin-left: 19%;*/
+	/*margin-right: 2%;*/
+}
+#mySidenav {
+	display: inherit;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media screen and (min-width: 200px) and (max-width: 1180px) {
+	.App-content-img img {
+		width:90%;
+		height:90%;
+		margin-left:10%;
+		margin-right:none;
+	}
+	.App-content-text, .Book-content-title{
+		text-align: left;
+		margin-left: 10%;
+		margin-right:1px;
+		/*margin-right:none;*/
+	}
+}
+@media screen and (min-width: 700px) and (max-width: 1150px) {
+	.App-header-title {
+		font-size: 45px;
+	}
+}
+
+@media screen and (min-width: 410px) and (max-width: 700px) {
+	.App-header-title {
+		font-size: 33px;
+	}
+}
+
+@media screen and (min-width: 200px) and (max-width: 410px) {
+	.App-header-title {
+		font-size: 30px;
+	}
+}
+
+@media screen and (min-width: 0px) and (max-width: 1205px) {
+	.App-content-title {
+	  /*margin-right: 10%;*/
+	  text-align: left;
+	  margin-left: 10%;
+  }
+  .App-header-title {
+	  text-align: left;
+	  margin-left: 10%;
+  }
+}

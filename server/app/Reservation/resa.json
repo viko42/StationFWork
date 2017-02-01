@@ -1,0 +1,25 @@
+{
+  "Reservation": [
+    {
+      "room": "Salle#43",
+      "owner": "viko_shop",
+      "duration_min": "61",
+      "date_in": "2018-02-01T05:06:00.000Z",
+      "date_out": "2018-02-01T06:06:00.000Z"
+    },
+    {
+      "room": "Salle#43",
+      "owner": "viko_shop",
+      "duration_min": "61",
+      "date_in": "2018-02-01T06:06:00.000Z",
+      "date_out": "2018-02-01T07:06:00.000Z"
+    },
+    {
+      "room": "Salle#43",
+      "owner": "viko_shop",
+      "duration_min": "61",
+      "date_in": "2018-02-01T07:09:00.000Z",
+      "date_out": "2018-02-01T08:09:00.000Z"
+    }
+  ]
+}
