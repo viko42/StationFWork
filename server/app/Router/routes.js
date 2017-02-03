@@ -4,34 +4,35 @@ import get_AvailabilityBy from '../available'
 import searchAllMatchedRooms from '../Search/searchRoom'
 const express = require('express');
 const router = express();
+const jsonfile = require('jsonfile')
+// import dateAdd from './function_date'
 
 module.exports = router;
+
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
-router.put('/room/book', (req, res) => {
-	const stuff = req.body.equipement,
-		time = req.body.time,
-		capacity = req.body.capacity,
-		date_resa = req.body.date;
+router.use(function(req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT ,DELETE');
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+});
 
-	const RoomNeeded = {
-		stuff,
-		time,
-		capacity,
-		date_resa
-	}
-	console.log("");
-	console.log(">>>>> REQ-RESA at "+ date_resa + " <<<<<<<<<<");
-	// let value = Meeting['rooms'];
-	// if (!value[req.params.id])
-	// 	console.log("La salle n'existe pas !");
-	// else {
-	// 	res.json(req.body);
-	// searchAllMatchedRooms(RoomNeeded);
-	get_AvailabilityBy(stuff, capacity, date_resa, time, res);
-	var date = new Date();
-	console.log(date);
+router.get('/rooms/event', (req, res) => {
+	jsonfile.readFile('app/Reservation/resa.json', function(err, obj) {
+		console.log(obj)
+		res.json(obj);
+	});
+});
+
+router.put('/room/book', (req, res) => {
+	const start = new Date(req.body.start),
+		end = new Date(req.body.end),
+		owner = req.body.owner,
+		room = req.body.room,
+		duration = req.body.duration_min;
+	get_AvailabilityBy(start, end, owner, room, duration, res); // Reservation d'une salle
 	res.send("OK");
 });
 

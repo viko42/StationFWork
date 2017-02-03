@@ -9,27 +9,21 @@ function addMinutes(date, minutes) {
     return new Date(date.getTime() + minutes*60000);
 }
 
-function get_AvailabilityBy(stuff, capacity, date_resa, time, res) {
-	if (!stuff)
-		console.log("Pas de filtre d'equipement.");
-	else
-		console.log(stuff);
-	if (!capacity)
-		console.log("Pas de filtre de capacité.");
-	else
-		console.log("Capacite de: " + capacity + " max");
-	if (!time)
-		res.send("Il manque le duration");
-	console.log("Pour la date du: " + date_resa);
-
-	const date_out = new Date(dateAdd(date_resa, 'minute', 60));
+Date.prototype.isValid = function () {
+	return this.getTime() === this.getTime();
+};
+function get_AvailabilityBy(start, end, owner, room, duration, res) {
+	if (!start || !end || !owner || !room){
+		console.log("Missing argument");
+		return ;
+	}
 	const New_resa =
 	{
-		"room": "Salle#43",
-		"owner": "viko_shop",
-		"duration_min": time,
-		"date_in": date_resa,
-		"date_out": date_out
+		room,
+		owner,
+		"duration_min": duration,
+		start,
+		end
 	};
 	ApplyRsvp(New_resa, res);
 }
