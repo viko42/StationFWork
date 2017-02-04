@@ -101,7 +101,7 @@ class Search extends Component {
 			<Header />
 			<div className="App" id="main">
 				<div className="App-header">
-					<h4 className="App-Button-Side" onClick={openNav}>&#9776;</h4>
+					<h4 className="App-Button-Side" onClick={openNav}>&#8801;</h4>
 					<section className="Search-header-title">Recherche</section>
 				</div>
 				<h2 className="Search-content-title">Trouvez votre salle de reunion</h2>

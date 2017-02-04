@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js --exec babel-node --presets es2015,stage-2"
+    "start": "nodemon --ignore 'list_reservation/list.json' server.js --exec babel-node --presets es2015,stage-2"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +19,8 @@
     "lodash": "^4.17.4",
     "mongoose": "^4.8.1",
     "nodemon": "^1.11.0",
-    "object-search": "0.0.5"
+    "object-search": "0.0.5",
+    "react-alert": "^1.0.14"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",

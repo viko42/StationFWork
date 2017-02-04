@@ -51,6 +51,21 @@ const Meeting = {
 		 "updatedAt":"2016-12-09T16:45:34.419Z"
 	  },
 	  {
+		 "name":"Salle de Viko",
+		 "description":"Salle de ouf",
+		 "capacity": 100,
+		 "equipements":[
+			{
+			   "name":"TV"
+			},
+			{
+			   "name":"Retro Projecteur"
+			}
+		 ],
+		 "createdAt":"2016-12-09T16:45:34.419Z",
+		 "updatedAt":"2016-12-09T16:45:34.419Z"
+	  },
+	  {
 		 "name":"Salle nulle",
 		 "description":"Salle nulle",
 		 "capacity": 26,

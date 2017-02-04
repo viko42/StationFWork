@@ -14,7 +14,7 @@ class App extends Component {
 		<Header />
 		<div className="App" id="main">
 			<div className="App-header">
-				<h4 className="App-Button-Side" onClick={openNav}>&#9776;</h4>
+				<h4 className="App-Button-Side" onClick={openNav}>&#8801;</h4>
 				<section className="App-header-title">Accueil</section>
 			</div>
 			<h2 className="App-content-title">Presentation</h2>

@@ -30,7 +30,6 @@ function searchAllMatchedRooms(RoomNeeded) {
 		&& capacity_required(RoomNeeded['capacity'], Meeting['rooms'][i]))
 			MyResult.push(Meeting['rooms'][i]);
 	}
-	console.log(MyResult);
 }
 
 module.exports = searchAllMatchedRooms;

@@ -1,13 +1,15 @@
 import User from './db.user'
 
 const viko = new User({
-	name: 'Viko',
-	username: 'vlancien',
-	password: 'pass'
+	start,
+	end,
+	room,
+	owner,
+	duration_min
 });
 
 viko.save(function(err) {
 	if (err)
 		throw err;
-	console.log('User saved successfully');
+	console.log('Slot saved successfully');
 });

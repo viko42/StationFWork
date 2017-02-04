@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Search from './rsvp/search';
+import Search from './reservation/search';
 import {Router, hashHistory, Route} from 'react-router'
-import Book from './rsvp/book'
+import Book from './reservation/book'
 import './index.css';
 
 ReactDOM.render(
