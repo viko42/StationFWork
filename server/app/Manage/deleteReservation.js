@@ -27,8 +27,7 @@ function searchAvailableInFile(obj, new_reservation, callback) {
 			end_file = new Date(obj['Reservation'][i]['end']);
 
 		if (start.getTime() === start_file.getTime() && end.getTime() === end_file.getTime() &&
-			owner === obj['Reservation'][i]['owner'] && room === obj['Reservation'][i]['room'] &&
-			duration === obj['Reservation'][i]['duration_min'])
+			owner === obj['Reservation'][i]['owner'] && room === obj['Reservation'][i]['room'])
 			is_found = 1;
 		else
 			updated_array['Reservation'].push(obj['Reservation'][i])
@@ -52,13 +51,13 @@ function deleteReservation(new_reservation, callback) {
 			if (msg === "Found for delete"){
 				writeInFile(obj, function(msg) {
 					if (msg === "Success")
-						callback(true);
+						return (true)
 					else
-						callback(false);
+						return (false)
 				});
 			}
 			else
-				callback(false);
+				return (false)
 		});
 	});
 }
