@@ -37,8 +37,11 @@ export default class Book extends Component {
 		closeNav();
 	}
 	async fetchData(callback) {
+    const _this = this;
 		const url = API_URL_EVENT
-		const fetched = await fetch(url)
+		const fetched = await fetch(url).catch(function() {
+      _this.msg.error("Connexion impossible");
+    })
 		const json = await fetched.json()
 		const name_room = Meeting['rooms'][this.props.params.id].name;
 		const array_sort = [];
@@ -81,9 +84,9 @@ export default class Book extends Component {
 			});
 			_this.setState({});
 			return _this.msg.success("La date vient d'etre validée");
-			// console.log(response)
+
 		}).catch(function (error) {
-			console.log(error);
+      _this.msg.error("Connexion impossible");
 			if (error)
 				return (false)
 			return (true)
@@ -138,11 +141,10 @@ export default class Book extends Component {
 					},
 					data: event
 				}).then(function(res) {
-					self.fetchData(function() {
-						self.msg.error("La date vient d'etre supprime.");
-					})
+					self.fetchData()
+          self.msg.info("La date vient d'etre supprime.")
 				}).catch(function(error) {
-					console.log(error);
+          self.msg.error("Connexion impossible")
 				});
 			}
 		}
